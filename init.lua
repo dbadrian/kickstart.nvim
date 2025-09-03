@@ -699,7 +699,15 @@ require('lazy').setup({
           },
         },
         clangd = {},
-        ruff = {},
+        -- :ruff = {},
+        basedpyright = {},
+        html = {},
+        htmx = {},
+        cssls = {},
+        rust_analyzer = {},
+        ols = {},
+        zls = {},
+        marksman = {},
       }
 
       -- Ensure the servers and tools above are installed
@@ -714,10 +722,20 @@ require('lazy').setup({
       -- `dependencies` table for `nvim-lspconfig` above.
       --
       -- You can add other tools here that you want Mason to install
-      -- for you, so that they are available from within Neovim.
+      -- for you, so that they are available from within Neovim.:
       local ensure_installed = vim.tbl_keys(servers or {})
       vim.list_extend(ensure_installed, {
         'stylua', -- Used to format Lua code
+        'html',
+        'htmx',
+        'cssls',
+        'clangd',
+        'rust_analyzer',
+        'ruff',
+        'basedpyright',
+        'ols',
+        'zls',
+        'marksman',
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
@@ -775,6 +793,7 @@ require('lazy').setup({
         -- You can use 'stop_after_first' to run the first available formatter from the list
         c = { 'clang-format' },
         cpp = { 'clang-format' },
+        json = { 'jq' },
         -- javascript = { "prettierd", "prettier", stop_after_first = true },
       },
     },
