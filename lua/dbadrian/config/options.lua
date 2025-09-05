@@ -27,6 +27,7 @@ end)
 vim.o.breakindent = true
 
 -- Save undo history
+vim.o.undodir = os.getenv 'HOME' .. '/.vim/undodir'
 vim.o.undofile = true
 
 -- Case-insensitive searching UNLESS \C or one or more capital letters in the search term
@@ -80,3 +81,11 @@ vim.o.tabstop = 4
 vim.o.shiftwidth = 0 -- same as tabstop
 vim.o.autoindent = false
 vim.o.expandtab = true
+vim.opt.scrolloff = 8
+
+vim.opt.updatetime = 50
+
+-- vim.opt.colorcolumn = '80'
+vim.o.incsearch = true
+
+vim.o.scrolloff = 8
