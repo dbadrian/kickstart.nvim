@@ -77,7 +77,7 @@ vim.o.wrap = true
 -- indentation
 vim.o.smarttab = true
 vim.o.cindent = true
-vim.o.tabstop = 4
+vim.o.tabstop = 2
 vim.o.shiftwidth = 0 -- same as tabstop
 vim.o.autoindent = false
 vim.o.expandtab = true
